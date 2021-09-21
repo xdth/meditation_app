@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# remote assets
+/remote_assets
 # testing
 /coverage
 
