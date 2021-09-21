@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AppContextProvider } from './hooks/appContext';
+import GlobalStyle from './styles/global';
+import Background from './components/Background';
+import Categories from './components/Categories';
+import Header from './components/Header';
+import Mute from './components/Mute';
+import Timer from './components/Timer';
+import TimerMenu from './components/TimerMenu';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppContextProvider>
+        <Background />
+        <Header />
+        <Timer />
+        <Categories />
+        <TimerMenu />
+        <Mute />
+      </AppContextProvider>
+      <GlobalStyle />
+    </>
   );
 }
 
